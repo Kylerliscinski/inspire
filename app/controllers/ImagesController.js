@@ -8,7 +8,7 @@ import { setHTML } from "../utils/Writer.js";
 
 export class ImagesController {
   constructor() {
-    console.log('hello');
+    // console.log('hello');
     this.getImage()
     AppState.on('activeImage', this.drawImage)
   }

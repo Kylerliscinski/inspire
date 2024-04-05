@@ -14,10 +14,10 @@ export class Image {
 
   get ActiveImageTemplate() {
     return `
-    <div class="row justify-content-center text-light">
-    <div class="col-md-7">
-      <h1 class="text-end">2024-04-04</h1>
-      <p>${this.author}</p>
+    <div class="row justify-content-center text-light align-content-center">
+    <div class="col d-flex justify-content-between">
+      <h4>Image by <br> ${this.author}</h4>
+      <h1>Todos</h1>
     </div>
     </div>
     `

@@ -9,14 +9,13 @@ export const api = axios.create({
   withCredentials: true
 })
 
-
 class ImagesService {
   async getImage() {
     const res = await api.get('/api/images')
-    console.log('📷', res.data);
+    // console.log('📷', res.data);
     const img = new Image(res.data)
     AppState.activeImage = img
-    console.log('🖼️', AppState.activeImage);
+    // console.log('🖼️', AppState.activeImage);
   }
 }
 

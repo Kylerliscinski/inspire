@@ -18,7 +18,6 @@
 <body>
   <!-- SECTION -->
   <header>
-    <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
   </header>
 
   <!-- SECTION -->
@@ -31,7 +30,21 @@
   </main>
 
   <!-- SECTION -->
-  <footer class="bg-dark text-light">
+  <footer class="text-light">
+
+    <section id="active-quote" class="text-center p-3">
+      <!-- Quote will go here -->
+    </section>
+
+    <section class="bg-dark opacity-75 rounded rounded-pill container p-3 mb-3 justify-content-between">
+      <div class="row">
+        <div class="col align-items-center">Weather</div>
+        <div class="col align-items-center text-center">
+          <h1>11:40am</h1>
+        </div>
+        <div class="col justify-content-end align-items-center d-flex" id="authstate"></div>
+      </div>
+    </section>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
