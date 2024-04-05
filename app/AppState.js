@@ -1,5 +1,6 @@
 import { Image } from "./models/Image.js"
 import { Quote } from "./models/Quote.js"
+import { Todo } from "./models/Todo.js"
 import { Weather } from "./models/Weather.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
@@ -27,6 +28,12 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {Weather} */
   activeWeather = null
+
+  /**@type {Todo[]} */
+  todos = []
+
+  /**@type {Todo} */
+  activeTodo = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

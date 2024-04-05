@@ -1,5 +1,18 @@
 
+const timeElement = document.getElementById("clock");
 
+function updateTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+
+  const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+
+  timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
 
 
 export class Image {
@@ -14,12 +27,8 @@ export class Image {
 
   get ActiveImageTemplate() {
     return `
-    <div class="row justify-content-center text-light align-content-center">
-    <div class="col d-flex justify-content-between">
       <h4>Image by <br> ${this.author}</h4>
-      <h1>Todos</h1>
-    </div>
-    </div>
     `
   }
+
 }

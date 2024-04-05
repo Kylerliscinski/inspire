@@ -8,7 +8,7 @@ import { setHTML } from "../utils/Writer.js";
 
 export class WeatherController {
   constructor() {
-    console.log('Weather ☁️');
+    // console.log('Weather ☁️');
     this.getWeather()
     AppState.on('activeWeather', this.drawWeather)
   }

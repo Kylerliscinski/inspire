@@ -33,5 +33,10 @@ body {
 div.reveal:hover {
   opacity: 1;
   transform: scale(1);
-  transition: all 5s;
+  transition: all 3s;
+}
+
+.clock {
+  font-size: 75px;
+  padding: 0;
 }

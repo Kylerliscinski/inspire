@@ -17,6 +17,7 @@ class ImagesService {
     AppState.activeImage = img
     // console.log('🖼️', AppState.activeImage);
   }
+
 }
 
 export const imagesService = new ImagesService()

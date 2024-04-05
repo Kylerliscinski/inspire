@@ -13,10 +13,10 @@ export const api = axios.create({
 class WeatherService {
   async getWeather() {
     const res = await api.get('/api/weather')
-    console.log('⛅', res.data);
+    // console.log('⛅', res.data);
     const weather = new Weather(res.data)
     AppState.activeWeather = weather
-    console.log('🎬⛅', AppState.activeWeather);
+    // console.log('🎬⛅', AppState.activeWeather);
   }
 
 }

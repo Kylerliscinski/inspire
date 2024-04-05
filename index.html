@@ -18,6 +18,7 @@
 <body>
   <!-- SECTION -->
   <header>
+
   </header>
 
   <!-- SECTION -->
@@ -32,17 +33,35 @@
   <!-- SECTION -->
   <footer class="text-light">
 
+    <section class="container">
+      <div class="col-4">
+        <form id="todo-form" onsubmit="app.TodosController.createTodo()">
+          <label for="todos">todo</label>
+          <input type="text" class="form-control">
+          <button>Add Todo</button>
+        </form>
+
+        <div class="row align-items-center border-bottom border-primary pb-1 mb-2 selectable bg-dark">
+          <div class="col-1">
+            <input type="checkbox">
+          </div>
+          <div class="col">Todo</div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
     <section id="active-quote" class="text-center p-3">
       <!-- Quote will go here -->
     </section>
 
-    <section class="bg-dark opacity-75 rounded rounded-pill container p-3 mb-3 justify-content-between">
+    <section class="bg-dark opacity-75 rounded rounded-pill container p-1 mb-3 justify-content-between">
       <div class="row">
-        <div id="active-weather" class="col-2 align-items-center">
+        <div id="active-weather" class="col-2 align-content-center">
           <!-- Weather will go here -->
         </div>
-        <div class="col-5 align-items-center text-center">
-          <h1>11:40am</h1>
+        <div id="clock" class="col-5 align-content-center text-end clock">
         </div>
         <div class="col-5 justify-content-end align-items-center d-flex" id="authstate"></div>
       </div>

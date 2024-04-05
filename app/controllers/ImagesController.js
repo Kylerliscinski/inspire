@@ -27,4 +27,5 @@ export class ImagesController {
     setHTML('active-image', activeImage.ActiveImageTemplate)
     document.body.style.backgroundImage = `url(${activeImage.largeImgUrl})`
   }
+
 }
