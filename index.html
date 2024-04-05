@@ -33,22 +33,18 @@
   <!-- SECTION -->
   <footer class="text-light">
 
-    <section class="container">
-      <div class="col-4">
-        <form id="todo-form" onsubmit="app.TodosController.createTodo()">
-          <label for="todos">todo</label>
-          <input type="text" class="form-control">
-          <button>Add Todo</button>
+    <section class="container w-25 bg-dark opacity-75 border border-light rounded">
+      <div class="row">
+        <form class="col" id="todo-form" onsubmit="app.TodosController.createTodo()">
+          <label for="todos"></label>
+          <input type="text" id="description" name="description" class="form-control" required
+            placeholder="Add New Todo">
+          <button class="btn btn-success"><i class="mdi mdi-plus-thick"></i></button>
         </form>
-
-        <div class="row align-items-center border-bottom border-primary pb-1 mb-2 selectable bg-dark">
-          <div class="col-1">
-            <input type="checkbox">
-          </div>
-          <div class="col">Todo</div>
-        </div>
-
       </div>
+
+      <div id="todo-template" class="container">
+        <!-- My Todos go here -->
       </div>
     </section>
 

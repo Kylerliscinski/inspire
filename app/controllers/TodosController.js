@@ -10,7 +10,25 @@ export class TodosController {
   constructor() {
     console.log('Todos');
     // this.getTodos()
+    AppState.on('todos', this.drawTodos)
+    AppState.on('account', this.getTodos)
+  }
 
+
+  async createTodo() {
+    try {
+      event.preventDefault()
+      console.log('creating a new todo');
+      const form = event.target
+      const todoData = getFormData(form)
+      console.log(todoData);
+      await todosService.createTodo(todoData)
+      // @ts-ignore
+      form.reset()
+    } catch (error) {
+      Pop.toast("Could not create a todo", 'error')
+      console.error(error)
+    }
   }
 
   async getTodos() {
@@ -28,18 +46,15 @@ export class TodosController {
     setHTML('todo-template', todoTemplate)
   }
 
-  async createTodo() {
+  async deleteTodo(todoId) {
     try {
-      event.preventDefault()
-      console.log('creating a new todo');
-      const form = event.target
-      const todoData = getFormData(form)
-      console.log(todoData);
-      await todosService.createTodo(todoData)
+      const res = await Pop.confirm("Are you sure you wan't to delete this Todo?")
+      if (res == false) return
+
+      await todosService.deleteTodo(todoId)
     } catch (error) {
-      Pop.toast("Could not create a todo", 'error')
+      Pop.toast("Could not delete todo", 'error')
       console.error(error)
     }
   }
-
 }
