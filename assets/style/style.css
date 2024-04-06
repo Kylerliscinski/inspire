@@ -40,3 +40,8 @@ div.reveal:hover {
   font-size: 75px;
   padding: 0;
 }
+
+.bg-dark-clear {
+  background-color: rgba(77, 77, 77, 0.469);
+  backdrop-filter: blur(20px);
+}
