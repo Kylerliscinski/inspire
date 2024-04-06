@@ -26,4 +26,8 @@ export class WeatherController {
     const activeWeather = AppState.activeWeather
     setHTML('active-weather', activeWeather.ActiveWeatherTemplate)
   }
+
+  toggleWeather() {
+    AppState.activeWeather.changeTemp()
+  }
 }

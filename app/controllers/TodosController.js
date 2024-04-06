@@ -2,7 +2,7 @@ import { AppState } from "../AppState.js";
 import { todosService } from "../services/TodosService.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
-import { setHTML } from "../utils/Writer.js";
+import { setHTML, setText } from "../utils/Writer.js";
 
 
 
@@ -11,6 +11,7 @@ export class TodosController {
     console.log('Todos');
     // this.getTodos()
     AppState.on('todos', this.drawTodos)
+    AppState.on('todos', this.drawTodoCount)
     AppState.on('account', this.getTodos)
   }
 
@@ -56,5 +57,21 @@ export class TodosController {
       Pop.toast("Could not delete todo", 'error')
       console.error(error)
     }
+  }
+
+  async toggleCompleted(todoId) {
+    try {
+      event.stopPropagation()
+      await todosService.toggleCompleted(todoId)
+    } catch (error) {
+      Pop.toast("Cannot toggle")
+      console.error(error)
+    }
+  }
+
+  drawTodoCount() {
+    const todoCount = AppState.todos.length
+    const uncompletedCount = AppState.todos.filter(todo => todo.completed == false).length
+    setText('todo-count', `${uncompletedCount}/${todoCount}`)
   }
 }

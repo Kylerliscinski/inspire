@@ -34,14 +34,28 @@
   <footer class="text-light">
 
     <section class="container w-25 bg-dark opacity-75 border border-light rounded">
-      <div class="row">
-        <form class="col" id="todo-form" onsubmit="app.TodosController.createTodo()">
-          <label for="todos"></label>
-          <input type="text" id="description" name="description" class="form-control" required
-            placeholder="Add New Todo">
-          <button class="btn btn-success"><i class="mdi mdi-plus-thick"></i></button>
-        </form>
+      <form id="todo-form" onsubmit="app.TodosController.createTodo()">
+        <div class="row mt-4 px-2">
+          <div class="col-10 px-0">
+            <input type="text" id="description" name="description" class="form-control" required
+              placeholder="Add New Todo">
+          </div>
+
+          <div class="col-2 px-0">
+            <button type="submit" class="btn btn-success"><i class="mdi mdi-plus-thick"></i></button>
+          </div>
+      </form>
       </div>
+
+      <div class="row px-2 pt-2 align-items-center">
+        <div class="col-9">
+          <h5 class="p-0">Todos remaining:</h5>
+        </div>
+        <div class="col-3 text-start">
+          <h5 id="todo-count"></h5>
+        </div>
+      </div>
+
 
       <div id="todo-template" class="container">
         <!-- My Todos go here -->

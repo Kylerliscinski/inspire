@@ -13,7 +13,7 @@ export class Todo {
     return `
     <div class="row bg-dark selectable border border-light rounded mb-1">
       <div class="col-3 align-content-center">
-        <input type="checkbox">
+        <input type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.TodosController.toggleCompleted('${this.id}')">
       </div>
       <div class="col align-content-center">${this.description}</div>
       <button onclick="app.TodosController.deleteTodo('${this.id}')" class="col-2 btn btn-danger m-1"><i class="mdi mdi-delete"></i></button>

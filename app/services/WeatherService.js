@@ -18,7 +18,6 @@ class WeatherService {
     AppState.activeWeather = weather
     // console.log('🎬⛅', AppState.activeWeather);
   }
-
 }
 
 export const weatherService = new WeatherService

@@ -9,28 +9,18 @@ export class Weather {
     this.temp = data.main.temp
     this.celcius = Math.round(data.main.temp - 273)
     this.fahrenheit = Math.round((data.main.temp - 273) * 9 / 5 + 32)
+    this.displayTemp = true
+  }
 
-
-    // const temp = document.getElementById("clock")
-
-    // function fahrenheit() {
-    //   const toFahrenheit = `${this.fahrenheit}<i class="mdi mdi-temperature-fahrenheit"></i>`
-    // }
-
-    // function celcius() {
-    //   const toCelcius = `${this.celcius}<i class="mdi mdi-temperature-celsius"></i>`
-    // }
-
-    // function switchTemp() {
-    //   if (fahrenheit) temp.innerText = `${this.fahrenheit}<i class="mdi mdi-temperature-fahrenheit"></i>`
-    // }
+  changeTemp() {
+    this.displayTemp = !this.displayTemp
   }
 
   get ActiveWeatherTemplate() {
     return `
-    <div onclick="switchTemp()" class="row border border-white rounded ms-3 selectable">
+    <div onclick="app.WeatherController.toggleWeather()" class="row border border-white rounded ms-3 selectable">
       <div id="temp" class="col-6 px-2 align-content-center">
-      ${this.fahrenheit}<i class="mdi mdi-temperature-celsius"></i>
+      ${this.temperature}
       <br>
       ${this.weather}
       </div>
@@ -39,5 +29,10 @@ export class Weather {
       </div>
     </div>
     `
+  }
+
+  get temperature() {
+    if (this.displayTemp) return `${this.fahrenheit} F`
+    else return `${this.celcius} C`
   }
 }
