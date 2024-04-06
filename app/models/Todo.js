@@ -11,7 +11,7 @@ export class Todo {
 
   get TodoTemplate() {
     return `
-    <div class="row bg-dark selectable border border-light rounded mb-1">
+    <div class="row bg-dark selectable border border-light rounded mb-1 text-light">
       <div class="col-3 align-content-center">
         <input type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.TodosController.toggleCompleted('${this.id}')">
       </div>

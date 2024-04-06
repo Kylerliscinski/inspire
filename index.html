@@ -24,43 +24,57 @@
   <!-- SECTION -->
   <main>
 
-    <section id="router-view">
+    <section id="router-view" class="text-light">
       <!-- primary viewport -->
     </section>
+
+    <section>
+      <button class="btn btn-primary opacity-75 mt-5 ms-3" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Todos</button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <section>
+            <form id="todo-form" onsubmit="app.TodosController.createTodo()">
+              <div class="row mt-4 px-2">
+                <div class="col-10 px-0">
+                  <input type="text" id="description" name="description" class="form-control" required
+                    placeholder="Add New Todo">
+                </div>
+                <div class="col-2 px-0">
+                  <button type="submit" class="btn btn-success"><i class="mdi mdi-plus-thick"></i></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row px-2 pt-2 align-items-center">
+          <div class="col-9">
+            <h5 class="p-0">Todos remaining:</h5>
+          </div>
+          <div class="col-3 text-start">
+            <h5 id="todo-count"></h5>
+          </div>
+        </div>
+
+        <div id="todo-template" class="container">
+          <!-- My Todos go here -->
+        </div>
+    </section>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+    </div>
+    </section>
+
 
   </main>
 
   <!-- SECTION -->
   <footer class="text-light">
 
-    <section class="container w-25 bg-dark opacity-75 border border-light rounded">
-      <form id="todo-form" onsubmit="app.TodosController.createTodo()">
-        <div class="row mt-4 px-2">
-          <div class="col-10 px-0">
-            <input type="text" id="description" name="description" class="form-control" required
-              placeholder="Add New Todo">
-          </div>
 
-          <div class="col-2 px-0">
-            <button type="submit" class="btn btn-success"><i class="mdi mdi-plus-thick"></i></button>
-          </div>
-      </form>
-      </div>
-
-      <div class="row px-2 pt-2 align-items-center">
-        <div class="col-9">
-          <h5 class="p-0">Todos remaining:</h5>
-        </div>
-        <div class="col-3 text-start">
-          <h5 id="todo-count"></h5>
-        </div>
-      </div>
-
-
-      <div id="todo-template" class="container">
-        <!-- My Todos go here -->
-      </div>
-    </section>
 
     <section id="active-quote" class="text-center p-3">
       <!-- Quote will go here -->
