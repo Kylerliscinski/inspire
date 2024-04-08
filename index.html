@@ -16,21 +16,16 @@
 </head>
 
 <body>
-  <!-- SECTION -->
   <header>
-
   </header>
 
-  <!-- SECTION -->
   <main>
-
     <section id="router-view" class="text-light">
       <!-- primary viewport -->
     </section>
 
     <section>
-
-
+      <!-- //!SECTION Creating todos section -->
       <div class="offcanvas offcanvas-end bg-dark-clear" tabindex="-1" id="offcanvasRight"
         aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
@@ -41,12 +36,14 @@
                   <input type="text" id="description" name="description" class="form-control" required
                     placeholder="Add New Todo">
                 </div>
+                <!-- //!SECTION Submit button for todos -->
                 <div class="col-2 px-0">
                   <button type="submit" class="btn text-light"><i class="mdi mdi-plus-thick"></i></button>
                 </div>
             </form>
         </div>
 
+        <!-- //!SECTION Todo count in the offcanvas -->
         <div class="row px-2 pt-2 align-items-center">
           <div class="col-9">
             <h5 class="p-0 text-light">Todos remaining:</h5>
@@ -56,6 +53,7 @@
           </div>
         </div>
 
+        <!-- //!SECTION Users todos in the offcanvas  -->
         <div id="todo-template" class="container">
           <!-- My Todos go here -->
         </div>
@@ -67,20 +65,15 @@
     </div>
     </div>
     </section>
-
-
   </main>
 
-  <!-- SECTION -->
   <footer class="text-light">
-
-
-
+    <!-- //!SECTION Quote section -->
     <section id="active-quote" class="text-center p-3">
       <!-- Quote will go here -->
     </section>
-
-    <section class="bg-dark opacity-75 rounded rounded-pill container p-1 mb-3 justify-content-between">
+    <!-- //!SECTION Bottom util bar -->
+    <section class="bg-dark-clear opacity-75 rounded rounded-pill container p-1 mb-3 justify-content-between">
       <div class="row">
         <div id="active-weather" class="col-2 align-content-center">
           <!-- Weather will go here -->
