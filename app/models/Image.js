@@ -32,7 +32,7 @@ export class Image {
         <h4 class="m-3">Image by <br> ${this.author}</h4>
       </div>
       <div class="col">
-      <button class="btn btn-dark rounded opacity-75 mt-3 ms-3 float-end me-3 align-items-start" type="button" data-bs-toggle="offcanvas"
+      <button class="btn bg-dark-clear border border-light text-light rounded opacity-75 mt-3 ms-3 float-end me-3 align-items-start" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Todos</button>
     </div>
     </div>
