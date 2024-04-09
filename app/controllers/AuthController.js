@@ -60,7 +60,7 @@ function authButton(user) {
     <button class="btn btn-small text-muted selectable mx-1" onclick="app.AuthController.logout()" title="logout"><i class="mdi mdi-logout f-16 text-white"></i></button>
   `
     : /* html */ `
-    <button class="btn border border-light selectable text-light" onclick="app.AuthController.login()">login</button>
+    <button class="btn border border-light selectable text-light mx-3" onclick="app.AuthController.login()">login</button>
   `
 }
 
